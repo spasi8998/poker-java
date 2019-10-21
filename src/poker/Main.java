@@ -27,21 +27,53 @@ public class Main extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        carta1 = new javax.swing.JLabel();
+        scopriBtn = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        carta1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/DIETRO.GIF"))); // NOI18N
+        carta1.setToolTipText("");
+        carta1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        carta1.setName(""); // NOI18N
+
+        scopriBtn.setText("Scopri");
+        scopriBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                scopriBtnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 669, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(carta1)
+                    .addComponent(scopriBtn))
+                .addContainerGap(488, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 327, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(carta1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 69, Short.MAX_VALUE)
+                .addComponent(scopriBtn)
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void scopriBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_scopriBtnActionPerformed
+        // TODO add your handling code here:
+        System.out.println(CarteRandomUtility.getRandomCartaFileName());
+        carta1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/" + CarteRandomUtility.getRandomCartaFileName())));
+        //carta1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/4FIORI.JPG")));
+    }//GEN-LAST:event_scopriBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,5 +111,7 @@ public class Main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel carta1;
+    private javax.swing.JButton scopriBtn;
     // End of variables declaration//GEN-END:variables
 }
