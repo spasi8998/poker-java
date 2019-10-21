@@ -29,6 +29,10 @@ public class Main extends javax.swing.JFrame {
 
         carta1 = new javax.swing.JLabel();
         scopriBtn = new javax.swing.JButton();
+        carta2 = new javax.swing.JLabel();
+        carta3 = new javax.swing.JLabel();
+        carta4 = new javax.swing.JLabel();
+        carta5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -37,12 +41,32 @@ public class Main extends javax.swing.JFrame {
         carta1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         carta1.setName(""); // NOI18N
 
-        scopriBtn.setText("Scopri");
+        scopriBtn.setText("VERIFICA");
         scopriBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 scopriBtnActionPerformed(evt);
             }
         });
+
+        carta2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/DIETRO.GIF"))); // NOI18N
+        carta2.setToolTipText("");
+        carta2.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        carta2.setName(""); // NOI18N
+
+        carta3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/DIETRO.GIF"))); // NOI18N
+        carta3.setToolTipText("");
+        carta3.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        carta3.setName(""); // NOI18N
+
+        carta4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/DIETRO.GIF"))); // NOI18N
+        carta4.setToolTipText("");
+        carta4.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        carta4.setName(""); // NOI18N
+
+        carta5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/DIETRO.GIF"))); // NOI18N
+        carta5.setToolTipText("");
+        carta5.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        carta5.setName(""); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -51,15 +75,29 @@ public class Main extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(carta1)
-                    .addComponent(scopriBtn))
-                .addContainerGap(488, Short.MAX_VALUE))
+                    .addComponent(scopriBtn)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(carta1)
+                        .addGap(27, 27, 27)
+                        .addComponent(carta4)
+                        .addGap(30, 30, 30)
+                        .addComponent(carta3)
+                        .addGap(34, 34, 34)
+                        .addComponent(carta2)
+                        .addGap(29, 29, 29)
+                        .addComponent(carta5)))
+                .addContainerGap(71, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(carta1)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(carta1)
+                    .addComponent(carta2)
+                    .addComponent(carta5)
+                    .addComponent(carta3)
+                    .addComponent(carta4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 69, Short.MAX_VALUE)
                 .addComponent(scopriBtn)
                 .addContainerGap())
@@ -72,7 +110,17 @@ public class Main extends javax.swing.JFrame {
         // TODO add your handling code here:
         System.out.println(CarteRandomUtility.getRandomCartaFileName());
         carta1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/" + CarteRandomUtility.getRandomCartaFileName())));
-        //carta1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/4FIORI.JPG")));
+        System.out.println(CarteRandomUtility.getRandomCartaFileName());
+        carta4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/" + CarteRandomUtility.getRandomCartaFileName())));
+        System.out.println(CarteRandomUtility.getRandomCartaFileName());
+        carta3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/" + CarteRandomUtility.getRandomCartaFileName())));
+        System.out.println(CarteRandomUtility.getRandomCartaFileName());
+        carta2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/" + CarteRandomUtility.getRandomCartaFileName())));
+        System.out.println(CarteRandomUtility.getRandomCartaFileName());
+        carta5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/" + CarteRandomUtility.getRandomCartaFileName())));
+        
+        //cSystem.out.println(CarteRandomUtility.getRandomCartaFileName());
+        
     }//GEN-LAST:event_scopriBtnActionPerformed
 
     /**
@@ -112,6 +160,10 @@ public class Main extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel carta1;
+    private javax.swing.JLabel carta2;
+    private javax.swing.JLabel carta3;
+    private javax.swing.JLabel carta4;
+    private javax.swing.JLabel carta5;
     private javax.swing.JButton scopriBtn;
     // End of variables declaration//GEN-END:variables
 }
